@@ -1,5 +1,6 @@
 import React, { Children } from 'react'
 import classes from './modal.module.css'
+import Button from '../button/Button'
 
 function Modal({children, handleShow}) {
 
@@ -7,8 +8,7 @@ function Modal({children, handleShow}) {
         <>
             <div className={classes.modalWrapper}></div>
             <div className={classes.modalContent}>
-                <button onClick={handleShow}>Закрыть</button>
-
+                <Button action={handleShow} text={'Закрыть'}/>
                 {children}
             </div>
         </>
